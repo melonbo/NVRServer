@@ -1,0 +1,14 @@
+prefix=/home/hzmct/res/lib_ffmpeg-2.1.8/
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+Name: libavcodec
+Description: FFmpeg codec library
+Version: 55.39.101
+Requires: libavutil = 52.48.101
+Requires.private: 
+Conflicts:
+Libs: -L${libdir} -lavcodec -ldl -Wl,-rpath,/usr/local/lib -L/usr/local/lib -lSDL -lpthread -lm -pthread -lz
+Libs.private: 
+Cflags: -I${includedir}

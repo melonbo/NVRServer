@@ -1,0 +1,14 @@
+prefix=/home/hzmct/res/lib_ffmpeg-2.1.8/
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+Name: libavdevice
+Description: FFmpeg device handling library
+Version: 55.5.100
+Requires: libavfilter = 3.90.100, libavformat = 55.19.104
+Requires.private: 
+Conflicts:
+Libs: -L${libdir} -lavdevice -ldl -Wl,-rpath,/usr/local/lib -L/usr/local/lib -lSDL -lpthread -lm -pthread -lz
+Libs.private: 
+Cflags: -I${includedir}
